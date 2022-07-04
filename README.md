@@ -32,7 +32,7 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 #### STEP 1: Install and configure Docker for your operating system.
 
 
-- **Windows/Mac:** Install Docker Desktop from [here](https://www.docker.com/products/docker-desktop/get-started).
+- **Windows/Mac:** Install Docker Desktop from [here](https://www.docker.com/get-started/).
 
   1. Recent versions of Docker Desktop for Windows seem to default to recommending and using WSL (windows
      subsystem for linux) as the docker virtualization backend.  If you need configure by hand
@@ -88,6 +88,10 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 <br />
 
 #### STEP 4: Install Remote Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+  1. Alternatively, simply search for Remote Containers in your extensions.  It will probably be a recommended
+     extension for you after installing the Docker Decktop.
+	 
 <br />
 <br />
 
