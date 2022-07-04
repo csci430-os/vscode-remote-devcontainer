@@ -20,7 +20,7 @@ Assignments and simulations for [Texas A&M University-Commerce](https://tamuc.ed
 # Instructions
 
 You can watch the following 
-[Video showing Setting Up your Dev Container](https://youtube.com) 
+[Video showing Setting Up your Dev Container](https://youtu.be/ttCrQjaNR4Y) 
 in which we show an example of
 performing the following steps.  This video shows setting up and
 installing docker and VS Code on a Windows 10 system, but the steps
@@ -50,7 +50,7 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 <br />
 <br />
 
-#### STEP 2: Install and Setup git from [here](https://git-scm.com/download/)
+#### STEP 2: Create GitHub account and install and configure git from [here](https://git-scm.com/download/)
 
   1. If you don't have one already, create/sign up for a free [GitHub account](https://github.com/)
   
@@ -87,7 +87,7 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 #### STEP 3: Install VS Code Editor from [here](https://code.visualstudio.com/)
 <br />
 
-#### STEP 4: Install Remote Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+#### STEP 4: Install Remote Development Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
   1. Alternatively, simply search for Remote Containers in your extensions.  It will probably be a recommended
      extension for you after installing the Docker Decktop.
