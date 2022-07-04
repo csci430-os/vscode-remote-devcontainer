@@ -1,0 +1,16 @@
+*.o
+*.gch
+*.exe
+*.tar.gz
+*.log
+*.out
+sim
+test
+\#*
+.\#*
+TODO.md
+Makefile.pandoc
+.vagrant/*
+html/*
+latex/*
+output/*
