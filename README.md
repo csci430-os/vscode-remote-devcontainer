@@ -1,10 +1,42 @@
 # Introduction 
 
-## This project is currently under heavy development - Proceed with caution
+Development Environment configuration instructions for 
+[Texas A&M University-Commerce](https://www.tamuc.edu/dept-of-computer-science-and-information-systems/)
+Computer Science and Information System classes.  The development
+environment you set up here may be used for many class assignment,
+such as data structures, operating systems, computer architecture,
+etc.  for both undergraduate and graduate computer science classes.
 
-Assignments and simulations for [Texas A&M University-Commerce](https://tamuc.edu) _CSCI 430 - Introduction to Operating Systems_ [codebase](https://bitbucket.org/dharter/csci430-os-sims/src/master/) created by [Dr. Derek Harter](https://derekharter.github.io/) is modified to run in an Ubuntu 20.04 VS Code Development Container on the local machine.
+This repository mainly consists of instructions for setting up a
+Visual Studio Code (VSCode) development environemnt that uses Docker
+Development Containers (DevContainers) and can be used to submit
+assignment in GitHub classrooms.  You will need a relatively recent
+computing system, either laptop or desktop.  It is recommended you use
+a system with at least 4GB of memory and not too old of a processor if
+possible.  You should be able to set up a VSCode Dev Container
+environment on Intel/AMD X86_64 hardware or Mac M1/M2 Arm
+architectures, though we have not yet tested as extensively these
+instructions on the M1/M2 Arm architectures, so feedback would be
+appreciated if you set up a VSCode Dev Container on that architecture.
+You should be able to set up the needed development environment on a
+Windows, Mac or Linux operating system based machine.  Chromebooks or
+Android OS are probably not supported for this configuration.
+
+This development environment provides a set of standard development
+tools, such as C/C++ compiler, build system tools and configuration,
+code formatters and style checkers, code documentation generation,
+etc.  Assignments you are given will assume you are using the exact
+development environment and version of these tools, so that we will
+minimize any problems from using different versions of build tools or
+build environments.  The Docker Development Container actually runs an
+Ubuntu 22.04 virtual environment in the container, to which the
+neede version of the development tools are installed for our class
+assignments.
 
 # System requirements
+
+It is recommended you have 4GB or more of main memory, and not too old of a
+system/processor to set up your development environment on.
 
 - **MacOS:** 
   - Docker Desktop 2.0+.
@@ -85,13 +117,15 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 <br />
 
 #### STEP 3: Install VS Code Editor from [here](https://code.visualstudio.com/)
+
+There should be standard installers for Windows, Mac and Linux available here, as well as
+instructions on how to run the installers if needed.
 <br />
 
 #### STEP 4: Install Remote Development Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-  1. Alternatively, simply search for Remote Containers in your extensions.  It will probably be a recommended
-     extension for you after installing the Docker Decktop.
-	 
+Alternatively, simply search for Remote Containers in your extensions.  It will probably be a recommended
+extension for you after installing the Docker Decktop.	 
 <br />
 <br />
 
@@ -146,7 +180,10 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 <br />
 
 # References
-1. https://code.visualstudio.com/docs/remote/containers
-2. https://code.visualstudio.com/docs/remote/create-dev-container
-3. https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+- Using remote Dev Containers in VSCode:  https://code.visualstudio.com/docs/remote/containers
+- Creating Dev Containers in VSCode:  https://code.visualstudio.com/docs/remote/create-dev-container
+- Windows Subsystem for Linux as Docker container backend on Windows 10: https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+- Initial git configuration: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+- Creating SSH key for remote GitHub repositories: https://medium.com/devops-with-valentine/2021-how-to-set-up-your-ssh-key-for-github-on-windows-10-afe6e729a3c0
+
 
