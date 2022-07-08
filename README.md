@@ -75,6 +75,11 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
     
     - Check `Use the WSL 2 based engine` and verify your distribution is enabled under `Resources > WSL Integration`.
 
+    **NOTE**: In some cases on Windows, you will get a message that "WSL 2 installation is incomplete" and your 
+	Docker will not be able to start yet.  Click on the link given in that error message, and follow the 6 steps
+	to get WSL 2 installed.  Then you should be able to (re)start Docker Desktop successfully with it using
+	WSL 2.
+	
 - **Linux:** Follow the official install instructions for 
   [Docker CE](https://hub.docker.com/search?offering=community&operating_system=linux&platform=&q=&type=edition) 
   for your distribution. 
