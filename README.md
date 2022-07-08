@@ -8,16 +8,16 @@ such as data structures, operating systems, computer architecture,
 etc.  for both undergraduate and graduate computer science classes.
 
 This repository mainly consists of instructions for setting up a
-Visual Studio Code (VSCode) development environemnt that uses Docker
+Visual Studio Code (VSCode) development environment that uses Docker
 Development Containers (DevContainers) and can be used to submit
 assignment in GitHub classrooms.  You will need a relatively recent
 computing system, either laptop or desktop.  It is recommended you use
 a system with at least 4GB of memory and not too old of a processor if
-possible.  You should be able to set up a VSCode Dev Container
+possible.  You should be able to set up a VSCode DevContainer
 environment on Intel/AMD X86_64 hardware or Mac M1/M2 Arm
 architectures, though we have not yet tested as extensively these
 instructions on the M1/M2 Arm architectures, so feedback would be
-appreciated if you set up a VSCode Dev Container on that architecture.
+appreciated if you set up a VSCode DevContainer on that architecture.
 You should be able to set up the needed development environment on a
 Windows, Mac or Linux operating system based machine.  Chromebooks or
 Android OS are probably not supported for this configuration.
@@ -30,7 +30,7 @@ development environment and version of these tools, so that we will
 minimize any problems from using different versions of build tools or
 build environments.  The Docker Development Container actually runs an
 Ubuntu 22.04 virtual environment in the container, to which the
-neede version of the development tools are installed for our class
+needed version of the development tools are installed for our class
 assignments.
 
 # System requirements
@@ -52,13 +52,13 @@ system/processor to set up your development environment on.
 # Instructions
 
 You can watch the following 
-[Video showing Setting Up your Dev Container](https://youtu.be/ttCrQjaNR4Y) 
+[Video showing Setting Up your DevContainer](https://youtu.be/ttCrQjaNR4Y) 
 in which we show an example of
 performing the following steps.  This video shows setting up and
-installing docker and VS Code on a Windows 10 system, but the steps
+installing docker and VSCode on a Windows 10 system, but the steps
 are mostly the same whether you are using Windows, MAC OS or Linux.
 
-## Setup VS Code with Remote Containers as described below.
+## Setup VSCode with Remote Containers as described below.
 <br />
 
 #### STEP 1: Install and configure Docker for your operating system.
@@ -66,15 +66,18 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 
 - **Windows/Mac:** Install Docker Desktop from [here](https://www.docker.com/get-started/).
 
-  1. Recent versions of Docker Desktop for Windows seem to default to recommending and using WSL (windows
-     subsystem for linux) as the docker virtualization backend.  If you need configure by hand
-	 by hand, to ensure the [WSL 2 back-end](https://docs.docker.com/desktop/windows/wsl/) is enabled: 
+  1. Recent versions of Docker Desktop for Windows seem to default to
+     recommending and using WSL (Windows subsystem for Linux) as the
+     docker virtualization back-end.  If you need to configure WSL by
+     hand [WSL 2 back-end](https://docs.docker.com/desktop/windows/wsl/):
     
     - Right-click on the `Docker taskbar item` and select `Settings`. 
     
     - Check `Use the WSL 2 based engine` and verify your distribution is enabled under `Resources > WSL Integration`.
 
-- **Linux:** Follow the official install instructions for [Docker CE](https://hub.docker.com/search?offering=community&operating_system=linux&platform=&q=&type=edition) for your distribution. 
+- **Linux:** Follow the official install instructions for 
+  [Docker CE](https://hub.docker.com/search?offering=community&operating_system=linux&platform=&q=&type=edition) 
+  for your distribution. 
 
   1. Add your user to the docker group by using a terminal to run: `sudo usermod -aG docker $USER`
 
@@ -116,7 +119,7 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 <br />
 <br />
 
-#### STEP 3: Install VS Code Editor from [here](https://code.visualstudio.com/)
+#### STEP 3: Install VSCode Editor from [here](https://code.visualstudio.com/)
 
 There should be standard installers for Windows, Mac and Linux available here, as well as
 instructions on how to run the installers if needed.
@@ -125,7 +128,7 @@ instructions on how to run the installers if needed.
 #### STEP 4: Install Remote Development Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 Alternatively, simply search for Remote Containers in your extensions.  It will probably be a recommended
-extension for you after installing the Docker Decktop.	 
+extension for you after installing the Docker Desktop.	 
 <br />
 <br />
 
@@ -144,7 +147,7 @@ extension for you after installing the Docker Decktop.
 <br />
 <br />
 
-- If you downloaded the repository as a `zip` folder, extract it to the desired location and open the folder in the VS Code
+- If you downloaded the repository as a `zip` folder, extract it to the desired location and open the folder in the VSCode
 <br />
 <br />
 
@@ -180,9 +183,9 @@ extension for you after installing the Docker Decktop.
 <br />
 
 # References
-- Using remote Dev Containers in VSCode:  https://code.visualstudio.com/docs/remote/containers
-- Creating Dev Containers in VSCode:  https://code.visualstudio.com/docs/remote/create-dev-container
-- Windows Subsystem for Linux as Docker container backend on Windows 10: https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+- Using remote DevContainers in VSCode:  https://code.visualstudio.com/docs/remote/containers
+- Creating DevContainers in VSCode:  https://code.visualstudio.com/docs/remote/create-dev-container
+- Windows Subsystem for Linux as Docker container back end on Windows 10: https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
 - Initial git configuration: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 - Creating SSH key for remote GitHub repositories: https://medium.com/devops-with-valentine/2021-how-to-set-up-your-ssh-key-for-github-on-windows-10-afe6e729a3c0
 
