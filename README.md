@@ -141,7 +141,7 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
   5. If you have never connected to Github before using ssh, you should ensure that Github is an known host and that your ssh
      key access that you just configured is working.  Do the following to test this:
      ```
-	 % ssh git@github.com
+	 $ ssh git@github.com
      The authenticity of host 'github.com (140.82.112.4)' can't be established.
      ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
      Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
