@@ -200,7 +200,7 @@ extension for you after installing the Docker Desktop.
 <br />
 
 <p align="center">
-  <img src="https://code.visualstudio.com/assets/docs/remote/containers/dev-container-reopen-prompt.png" width=70% height=70%>
+  <img src="https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/dev-container-reopen-prompt.png" width=70% height=70%>
 </p>
 <br />
 <br />
@@ -215,7 +215,7 @@ extension for you after installing the Docker Desktop.
   <br />
   
   <p align="center">
-    <img src="https://code.visualstudio.com/assets/docs/remote/containers/remote-containers-reopen.png" width=70% height=70%>
+    <img src="https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/remote-containers-reopen.png" width=70% height=70%>
   </p>
 
 <br />
