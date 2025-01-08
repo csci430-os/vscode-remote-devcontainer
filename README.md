@@ -89,7 +89,7 @@ using Windows, MAC OS or Linux.
     - [Enabling Intel VT or AMD-V virtualization hardware extensions in BIOS](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/sect-virtualization-troubleshooting-enabling_intel_vt_and_amd_v_virtualization_hardware_extensions_in_bios#sect-Virtualization-Troubleshooting-Enabling_Intel_VT_and_AMD_V_virtualization_hardware_extensions_in_BIOS) 
 
 
-## STEP 2: Create GitHub account and install and configure git from [here](https://git-scm.com/download/)
+## STEP 2: Create GitHub account and install and configure git
 
   - **Create GitHub Account**
   
@@ -162,23 +162,22 @@ Download and install the VSCode Editor on your system from [here](https://code.v
 There should be standard installers for Windows, Mac and Linux available here, as well as
 instructions on how to run the installers if needed.
 
-## STEP 4: Install Remote Development Containers 
+## STEP 4: Install Microsoft Remote Development Containers 
 
-Once you have VSCode installed, start it up.  You need to install the Micsosoft Remote Containers
+Once you have VSCode installed, start it up.  You need to install the Micsosoft Remote Dev Containers
 extension.  The easiest way to do this is to open up the `Extensions` section in VSCode and search
-for "Remote Containers".  When you find the official extension provided by Microsoft, install it in you
+for "Dev Containers".  When you find the official extension provided by Microsoft, install it in you
 VSCode IDE.
 
 The Remote Containers extension page is [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 
-<br />
-
 # References
+
 - Using remote DevContainers in VSCode:  https://code.visualstudio.com/docs/remote/containers
 - Creating DevContainers in VSCode:  https://code.visualstudio.com/docs/remote/create-dev-container
 - Windows Subsystem for Linux as Docker container back end on Windows 10: https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
 - Initial git configuration: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
-- Creating SSH key for remote GitHub repositories: https://medium.com/devops-with-valentine/2021-how-to-set-up-your-ssh-key-for-github-on-windows-10-afe6e729a3c0
+- Creating SSH key for remote GitHub repositories: https://davidaugustat.com/windows/windows-11-setup-ssh
 
 
