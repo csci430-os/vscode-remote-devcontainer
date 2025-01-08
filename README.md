@@ -5,22 +5,20 @@ Development Environment configuration instructions for
 Computer Science and Information System classes.  The development
 environment you set up here may be used for many class assignment,
 such as data structures, operating systems, computer architecture,
-etc.  for both undergraduate and graduate computer science classes.
+etc. for both undergraduate and graduate computer science classes.
 
 This repository mainly consists of instructions for setting up a
 Visual Studio Code (VSCode) development environment that uses Docker
 Development Containers (DevContainers) and can be used to submit
 assignment in GitHub classrooms.  You will need a relatively recent
 computing system, either laptop or desktop.  It is recommended you use
-a system with at least 4GB of memory and not too old of a processor if
-possible.  You should be able to set up a VSCode DevContainer
+a system with at least 4GB of memory and not too old of a processor,
+if possible.  You should be able to set up a VSCode DevContainer
 environment on Intel/AMD X86_64 hardware or Mac M1/M2 Arm
-architectures, though we have not yet tested as extensively these
-instructions on the M1/M2 Arm architectures, so feedback would be
-appreciated if you set up a VSCode DevContainer on that architecture.
-You should be able to set up the needed development environment on a
-Windows, Mac or Linux operating system based machine.  Chromebooks or
-Android OS are probably not supported for this configuration.
+architectures.  You should be able to set up the needed development
+environment on a Windows, Mac or Linux operating system based machine.
+Chromebooks or Android OS are not supported for this
+configuration.
 
 This development environment provides a set of standard development
 tools, such as C/C++ compiler, build system tools and configuration,
@@ -29,7 +27,7 @@ etc.  Assignments you are given will assume you are using the exact
 development environment and version of these tools, so that we will
 minimize any problems from using different versions of build tools or
 build environments.  The Docker Development Container actually runs an
-Ubuntu 22.04 virtual environment in the container, to which the
+Ubuntu 24.04 virtual environment in the container, to which the
 needed version of the development tools are installed for our class
 assignments.
 
@@ -51,25 +49,21 @@ system/processor to set up your development environment on.
 
 # Instructions
 
-You can watch the following 
-[Video showing Setting Up your DevContainer](https://youtu.be/ttCrQjaNR4Y) 
-in which we show an example of
-performing the following steps.  This video shows setting up and
-installing docker and VSCode on a Windows 10 system, but the steps
-are mostly the same whether you are using Windows, MAC OS or Linux.
+You can watch this video [Video showing Setting Up your DevContainer](https://youtu.be/ttCrQjaNR4Y) 
+in which we show an example of performing the steps described below.
+This video shows setting up and installing docker and VSCode on a
+Windows 10 system, but the steps are mostly the same whether you are
+using Windows, MAC OS or Linux.
 
-## Setup VSCode with Remote Containers as described below.
-<br />
-
-#### STEP 1: Install and configure Docker for your operating system.
+## STEP 1: Install and configure Docker for your operating system.
 
 
-- **Windows/Mac:** Install Docker Desktop from [here](https://www.docker.com/get-started/).
+- **Windows/Mac:** Get the most recent Docker Desktop installer from [here](https://www.docker.com/get-started/).
 
   1. Recent versions of Docker Desktop for Windows seem to default to
      recommending and using WSL (Windows subsystem for Linux) as the
      docker virtualization back-end.  If you need to configure WSL by
-     hand [WSL 2 back-end](https://docs.docker.com/desktop/windows/wsl/):
+     hand see the following: [WSL 2 back-end](https://docs.docker.com/desktop/windows/wsl/):
     
     - Right-click on the `Docker taskbar item` and select `Settings`. 
     
@@ -92,25 +86,20 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 
 	In your BIOS, find the setting for hardware Virtualization
 
-	- [Enabling Virtualization in your PC BIOS](https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html)
+    - [Enabling Intel VT or AMD-V virtualization hardware extensions in BIOS](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/sect-virtualization-troubleshooting-enabling_intel_vt_and_amd_v_virtualization_hardware_extensions_in_bios#sect-Virtualization-Troubleshooting-Enabling_Intel_VT_and_AMD_V_virtualization_hardware_extensions_in_BIOS) 
 
 
+## STEP 2: Create GitHub account and install and configure git from [here](https://git-scm.com/download/)
 
-- **Linux:** Follow the official install instructions for 
-  [Docker CE](https://hub.docker.com/search?offering=community&operating_system=linux&platform=&q=&type=edition) 
-  for your distribution. 
-
-  1. Add your user to the docker group by using a terminal to run: `sudo usermod -aG docker $USER`
-
-  2. `Sign out and back in` again so your changes take effect.
-<br />
-<br />
-
-#### STEP 2: Create GitHub account and install and configure git from [here](https://git-scm.com/download/)
-
-  1. If you don't have one already, create/sign up for a free [GitHub account](https://github.com/)
+  - **Create GitHub Account**
   
-  2. If you are using Mac or Linux, you probably already have a git client installed, so you do not need to
+  If you don't have one already, create/sign up for a free [GitHub account](https://github.com/)
+  
+  Make sure that you use your student@leomail.tamuc.edu as the primary e-mail address, if at all possible.
+  
+  - **Install Git and SSH tools**
+  
+  1. If you are using Mac or Linux, you probably already have a git client installed, so you do not need to
      install it from the git-scm link above.  You can check if you have git already installed by opening
 	 a command line terminal and trying
 	 
@@ -119,18 +108,27 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 	 ```
 	 If you do not have git on your Mac/Linux system, it will probably be easier to use your package
 	 manager or brew to install git on your system.
-	 
+
+  2. For Windows machines, download and install the standard [Git Installer](https://git-scm.com/downloads).
+  
+     - You should accept all of the default options, excpet when asked for cr/lf (carriage return / line feed)
+	 settings.  Windows uses different line ending conventions, but our work will be done in a linux/unix
+	 environment.  So make sure you select the option to not convert cr/lf endings, they should be left
+	 as is for the code your checkout for the class assignments.
+  
   3. For all operating systems, you need to perform the following git configuration steps.  
      [Initial Git Configuration](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) 
-	 and [Creating SSH key for remote GitHub repositories](https://medium.com/devops-with-valentine/2021-how-to-set-up-your-ssh-key-for-github-on-windows-10-afe6e729a3c0)
+	 and [How to Set up SSH and Generate an SSH Key on Windows 11](https://davidaugustat.com/windows/windows-11-setup-ssh)
 	 Open up a command line terminal and perform the configuration and generate an ssh key like this:
 	 ```
 	 $ git config --global user.name "John Doe"
 	 $ git config --global user.email johndoe@example.com
 	 $ ssh-keygen
 	 ```
-	 Make sure that you use your real name here and in your GitHub account for class assignments.  Also ensure that the e-mail address you specify
-	 in the git config is the same as the primary e-mail address you use in creating your GitHub account.
+     Make sure that you use your real name here and in your GitHub account
+	 for class assignments.  Also ensure that the e-mail address you
+	 specify in the git config is the same as the primary e-mail
+	 address you use in creating your GitHub account.
 	 
   4. Copy the generated ssh key to your GitHub account.  The second link in previous step shows this.  There will be a file
      named something like `c:\Users\username\.ssh\id_rsa.pub` in your home directory, though the location of your home directory
@@ -138,7 +136,7 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 	 be able to see it in a file browser on your system unless you enable viewing hidden files/directories.  Find the public
 	 key, and copy it.  Then create a new ssh key in GitHub and paste in this public key.
 	 
-  5. If you have never connected to Github before using ssh, you should ensure that Github is an known host and that your ssh
+  5. **IMPORTANT** If you have never connected to Github before using ssh, you should ensure that Github is an known host and that your ssh
      key access that you just configured is working.  Do the following to test this:
      ```
 	 $ ssh git@github.com
@@ -152,71 +150,27 @@ are mostly the same whether you are using Windows, MAC OS or Linux.
 	 
 	 ```
 	 And say 'yes' if prompted to add Github as a known host as shown here.  If it says you have successfully
-	 authenticated, then you probably have configured your ssh key correctly for Github use.
+	 authenticated, then you probably have configured your ssh key correctly for Github use.  If this step does
+	 not successfully connect, do no proceed until you get help or correctly set up your ssh key to be able to
+	 access your GitHub account.
 	 
-<br />
-<br />
 
-#### STEP 3: Install VSCode Editor from [here](https://code.visualstudio.com/)
+## STEP 3: Install VSCode Editor 
+
+Download and install the VSCode Editor on your system from [here](https://code.visualstudio.com/)
 
 There should be standard installers for Windows, Mac and Linux available here, as well as
 instructions on how to run the installers if needed.
-<br />
 
-#### STEP 4: Install Remote Development Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+## STEP 4: Install Remote Development Containers 
 
-Alternatively, simply search for Remote Containers in your extensions.  It will probably be a recommended
-extension for you after installing the Docker Desktop.	 
-<br />
-<br />
+Once you have VSCode installed, start it up.  You need to install the Micsosoft Remote Containers
+extension.  The easiest way to do this is to open up the `Extensions` section in VSCode and search
+for "Remote Containers".  When you find the official extension provided by Microsoft, install it in you
+VSCode IDE.
 
-## Setup and start your development environment
+The Remote Containers extension page is [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-### Watch this [GIF](https://microsoft.github.io/vscode-remote-release/images/remote-containers-readme.gif) to have an idea what the result will look like.
-<br />
-
-- Clone (or download) this repository on to your local machine 
-<br />
-<br />
-
-<p align="center">
-  <img src="https://github.com/TAMUC-RELLIS/vscode-remote-csci-430/blob/main/images/download-repo.png" width=70% height=70%>
-</p>
-<br />
-<br />
-
-- If you downloaded the repository as a `zip` folder, extract it to the desired location and open the folder in the VSCode
-<br />
-<br />
-
-<p align="center">
-  <img src="https://i.stack.imgur.com/o7dTO.gif" padding-left=50px  width=70% height=70%>
-</p>
-<br />
-<br />
-
-- You will be prompted to _Reopen in Container_ at the bottom right corner of your editor. 
-<br />
-<br />
-
-<p align="center">
-  <img src="https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/dev-container-reopen-prompt.png" width=70% height=70%>
-</p>
-<br />
-<br />
-
-- If not, you can manually invoke this 
-  
-  1. Press `Ctrl + Shift + P`.
-  
-  2. Start typing `Remote Containers`. 
-  
-  3. You can select `Remote Containers: Reopen in Container` as shown below.
-  <br />
-  
-  <p align="center">
-    <img src="https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/remote-containers-reopen.png" width=70% height=70%>
-  </p>
 
 <br />
 
