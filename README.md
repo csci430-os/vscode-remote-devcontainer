@@ -111,10 +111,10 @@ using Windows, MAC OS or Linux.
 
   2. For Windows machines, download and install the standard [Git Installer](https://git-scm.com/downloads).
   
-     - You should accept all of the default options, excpet when asked for cr/lf (carriage return / line feed)
-	 settings.  Windows uses different line ending conventions, but our work will be done in a linux/unix
-	 environment.  So make sure you select the option to not convert cr/lf endings, they should be left
-	 as is for the code your checkout for the class assignments.
+     - You should accept all of the default options, except when asked for "Configuring the line ending conversions".
+	   Windows uses different line ending conventions, but our work will be done in a linux/unix
+	   environment.  So make sure you select the option to not convert cr/lf endings
+	   "Checkout as-is, commit as-is".
   
   3. For all operating systems, you need to perform the following git configuration steps.  
      [Initial Git Configuration](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) 
@@ -124,6 +124,28 @@ using Windows, MAC OS or Linux.
 	 $ git config --global user.name "John Doe"
 	 $ git config --global user.email johndoe@example.com
 	 $ ssh-keygen
+	 Generating public/private rsa key pair.
+	 Enter file in which to save the key (C:\Users\Quickemu/.ssh/id_rsa):
+	 Created directory 'C:\\Users\\Quickemu/.ssh'.
+	 Enter passphrase (empty for no passphrase):
+	 Enter same passphrase again:
+	 Your identification has been saved in C:\Users\Quickemu/.ssh/id_rsa
+	 Your public key has been saved in C:\Users\Quickemu/.ssh/id_rsa.pub
+	 The key fingerprint is:
+	 SHA256:nywXiR8TIePPUsVVt5wNu5PdmYYgQXkLMXkhD09Shy0 quickemu@classdemo
+	 The key's randomart image is:
+	 +---[RSA 3072]----+
+	 |        +O*==oo.o|
+	 |       . *XEo..o=|
+	 |        ..*+o .+.|
+	 |         =.+. .++|
+	 |        S B  .++o|
+	 |         = =  .. |
+	 |        . *      |
+	 |         o       |
+	 |                 |
+	 +----[SHA256]-----+
+	 
 	 ```
      Make sure that you use your real name here and in your GitHub account
 	 for class assignments.  Also ensure that the e-mail address you
